@@ -1,0 +1,8 @@
+$mainLightColor: #fcfcf7;
+$mainDarkColor: #f6f6e9;
+
+@mixin bgSettings {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
