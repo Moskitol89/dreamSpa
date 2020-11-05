@@ -18,7 +18,7 @@ $(function () {
         $(this).toggleClass("clicked");
     });
 
-    let reviewsSwiper = new Swiper('.reviews .swiper-container', {
+    let reviewsSwiper = new Swiper(".reviews .swiper-container", {
         spaceBetween: 30,
         allowTouchMove: false,
         autoHeight: true,
@@ -32,6 +32,16 @@ $(function () {
         navigation: {
             nextEl: '.reviews .swiper-next',
             prevEl: '.reviews .swiper-prev',
+            disabledClass: 'swiper-button-disabled'
+        },
+    });
+
+    let expertsSwiper = new Swiper(".about__page-experts .swiper-container", {
+        spaceBetween: 25,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.experts__slider-arrows .swiper-next',
+            prevEl: '.experts__slider-arrows .swiper-prev',
             disabledClass: 'swiper-button-disabled'
         },
     });
