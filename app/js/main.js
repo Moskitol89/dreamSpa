@@ -38,12 +38,17 @@ $(function () {
 
     let expertsSwiper = new Swiper(".about__page-experts .swiper-container", {
         spaceBetween: 25,
-        slidesPerView: 2,
+        slidesPerView: 1,
         navigation: {
             nextEl: '.experts__slider-arrows .swiper-next',
             prevEl: '.experts__slider-arrows .swiper-prev',
             disabledClass: 'swiper-button-disabled'
         },
+        breakpoints: {
+            840: {
+                slidesPerView: 2
+            }
+        }
     });
 
     $(".header__burger").click(function () {
