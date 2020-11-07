@@ -124,7 +124,9 @@
 //start warm section
 .warm {
   padding-bottom: 70px;
-
+  .warm__text {
+    margin-bottom: 90px;
+  }
   .warm__items {
     display: flex;
     justify-content: space-between;
@@ -306,16 +308,7 @@
         left: 50%;
         top: -100px;
         z-index: 1;
-
         transform: translateX(-50%);
-
-        &.dashed__decor:after {
-          width: 90%;
-          left: 5%;
-          border: 1px dashed #f6f3f1;
-          border-radius: 50%;
-          z-index: 3;
-        }
 
         .procedures__item-img {
           width: 100%;
@@ -362,11 +355,9 @@
 //start gallery section
 .gallery {
   background-color: $mainLightColor;
-
-  .gallery__subtitle {
+  .gallery__text {
     margin-bottom: 40px;
   }
-
   .gallery__items {
     display: grid;
     grid-template-columns: repeat(5, 380px);
@@ -553,14 +544,6 @@
     top: -75px;
     border-radius: 50%;
     @include bgSettings;
-
-    &.dashed__decor:after {
-      width: 90%;
-      left: 5%;
-      border: 1px dashed #f6f3f1;
-      border-radius: 50%;
-      z-index: 3;
-    }
   }
 
   .swiper__arrows {
@@ -857,14 +840,7 @@
       }
 
       &:after {
-        position: absolute;
-        content: "";
-        width: 90%;
-        height: 90%;
-        top: 5%;
-        left: 5%;
         border: 1px dashed #f2ede8;
-        border-radius: 50%;
       }
     }
 
@@ -1158,10 +1134,7 @@
     z-index: 1;
 
     &::after {
-      border-radius: 50%;
-      width: 90%;
-      border: 1px dashed #efeae7;
-      left: 5%;
+      border-color: #efeae7;
     }
 
     .expert__item-img {
@@ -1286,9 +1259,48 @@
     cursor: pointer;
   }
 }
-
 //end about.html experts block
 //end about.html
+
+//start blog.html
+.blog__page-heading {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.blog__page-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.blog__aside {
+  max-width: 340px;
+  width: 100%;
+}
+.blog__main-items {
+  display: flex;
+  flex-direction: column;
+}
+.blog__main-item {
+  display: flex;
+  justify-content: space-between;
+}
+.main__item-info {
+  .info__date-img {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    @include bgSettings;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .info__date-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+//end blog.html
 
 
 @import "media";
