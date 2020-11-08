@@ -54,9 +54,11 @@ $(function () {
     $(".header__burger").click(function () {
         $(".menu").slideToggle();
     })
-    $(".header .menu ul li a").click(function () {
-        $(".menu").fadeToggle();
-    });
+    if(window.innerWidth < 1200) {
+        $(".header .menu ul li a").click(function () {
+            $(".menu").fadeToggle();
+        });
+    }
 
     $(".process__tab").click(function (){
         $(this).addClass("active").siblings().removeClass("active");

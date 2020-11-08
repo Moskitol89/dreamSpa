@@ -84,6 +84,7 @@ body {
     line-height: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
     color: #37251b;
+    font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
@@ -119,6 +120,17 @@ body {
   left: 5%;
   border-radius: 50%;
   border: 1px dashed #d2c4b9;
+}
+.before-footer__logo::after {
+  content: "";
+  background-image: url("../img/circle-logo.png");
+  height: 108px;
+  width: 108px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -60px;
+  z-index: 1;
 }
 .swiper-button-disabled {
   opacity: 0.4;
