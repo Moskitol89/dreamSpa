@@ -73,4 +73,17 @@ $(function () {
        $(".about__page-gift .gift__item .gift__hover-block").html("Выбрать карту");
        $(".about__page-gift .gift__item.active .gift__hover-block").html("Карта выбрана");
     });
+
+    $(".blog__side-bar .side-bar__categories-item").click(function () {
+        $(".blog__side-bar .side-bar__categories-item").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".blog__side-bar .side-bar__tags-btn").click(function () {
+        $(".blog__side-bar .side-bar__tags-btn").removeClass("active");
+        $(this).addClass("active");
+    });
+    //для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
+    $(".side-bar__categories-item a , .side-bar__tags-btn").click((e) => {
+        e.preventDefault();
+    })
 });

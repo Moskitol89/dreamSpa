@@ -66,7 +66,7 @@ body {
   &:before {
     content: "";
     position: absolute;
-    background-image: url("../img/decor-2.png");
+    background-image: url("../img/decor/decor-2.png");
     background-repeat: repeat;
     height: 35px;
     width: 100%;
@@ -83,7 +83,7 @@ body {
     font-size: 26px;
     line-height: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #37251b;
+    color: $brownText;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;

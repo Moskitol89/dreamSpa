@@ -20,7 +20,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../img/decor-1.png");
+      background-image: url("../img/decor/decor-1.png");
       background-repeat: repeat;
       height: 26px;
       width: 100%;
@@ -141,7 +141,7 @@
 
     &:before {
       content: "";
-      background-image: url("../img/main-page-content/warm-item-decor-1.png");
+      background-image: url("../img/decor/warm-item-decor-1.png");
       position: absolute;
       width: 100%;
       height: 19px;
@@ -153,7 +153,7 @@
 
     &:after {
       content: "";
-      background-image: url("../img/main-page-content/warm-item-decor-2.png");
+      background-image: url("../img/decor/warm-item-decor-2.png");
       position: absolute;
       width: 100%;
       height: 19px;
@@ -270,7 +270,7 @@
 
       &:after {
         content: "";
-        background-image: url("../img/main-page-content/warm-item-decor-2.png");
+        background-image: url("../img/decor/warm-item-decor-2.png");
         position: absolute;
         width: 100%;
         height: 19px;
@@ -295,7 +295,7 @@
 
       &:after {
         content: "";
-        background-image: url("../img/main-page-content/procedures-item-decor.png");
+        background-image: url("../img/decor/procedures-item-decor.png");
         height: 53px;
         width: 100%;
         position: absolute;
@@ -325,7 +325,7 @@
         font-size: 26px;
         line-height: 30px;
         margin-bottom: 30px;
-        color: #37251b;
+        color: $brownText;
       }
 
       .procedures__item-text {
@@ -339,7 +339,7 @@
 
       .procedures__item-link {
         position: relative;
-        background-image: url("../img/main-page-content/procedures-btn-bg.png");
+        background-image: url("../img/decor/procedures-btn-bg.png");
         width: 129px;
         height: 51px;
         border-radius: 25px;
@@ -491,6 +491,7 @@
   .swiper-container {
     background-color: $mainLightColor;
   }
+
   .swiper-slide:not(.swiper-slide-active) {
     opacity: 0;
   }
@@ -594,7 +595,7 @@
           display: block;
 
           a {
-            color: #37251b;
+            color: $brownText;
           }
         }
       }
@@ -639,7 +640,7 @@
 
     .footer__created-text {
       text-align: center;
-      color: #37251b;
+      color: $brownText;
       font-size: 13px;
       padding-left: 15px;
       padding-right: 15px;
@@ -682,7 +683,7 @@
       font-weight: 600;
       font-size: 26px;
       line-height: 30px;
-      color: #37251b;
+      color: $brownText;
       margin-bottom: 30px;
     }
 
@@ -759,11 +760,11 @@
       cursor: pointer;
 
       &.active {
-        border-bottom: 5px solid #37251b;
+        border-bottom: 5px solid $brownText;
         transition: all .5s;
 
         &::before {
-          color: #37251b;
+          color: $brownText;
           transition: all .5s;
         }
       }
@@ -796,7 +797,7 @@
     font-weight: 600;
     font-size: 26px;
     line-height: 28px;
-    color: #37251b;
+    color: $brownText;
     margin-bottom: 40px;
   }
 
@@ -822,7 +823,7 @@
 
       &:before {
         position: absolute;
-        color: #37251b;
+        color: $brownText;
         font-size: 34px;
         top: 50%;
         left: 50%;
@@ -865,16 +866,12 @@
   background-color: $mainLightColor;
   padding-bottom: 60px;
 
-  .gift__text {
-    margin-bottom: 50px;
-  }
-
   .gift__step {
     text-align: center;
     margin-bottom: 50px;
     font-size: 16px;
     line-height: 28px;
-    color: #37251b;
+    color: $brownText;
 
     span {
       color: #dc8e4b;
@@ -900,7 +897,7 @@
 
     &:after {
       content: "";
-      background-image: url("../img/about-page-content/gift-item-decor.png");
+      background-image: url("../img/decor/experts-slide-decor.png");
       position: absolute;
       width: 100%;
       height: 5px;
@@ -959,7 +956,7 @@
   }
 
   .gift__name {
-    color: #37251b;
+    color: $brownText;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -1027,7 +1024,7 @@
     }
 
     .gift__form-button {
-      background-image: url("../img/about-page-content/gift-btn-bg.jpg");
+      background-image: url("../img/decor/gift-btn-bg.jpg");
       width: 200px;
       height: 51px;
       border: none;
@@ -1061,7 +1058,7 @@
 
     &:after {
       content: "";
-      background-image: url("../img/about-page-content/gift-item-decor.png");
+      background-image: url("../img/decor/experts-slide-decor.png");
       position: absolute;
       width: 100%;
       height: 5px;
@@ -1076,7 +1073,7 @@
     height: 170px;
     text-align: center;
     padding-top: 25px;
-    color: #37251b;
+    color: $brownText;
   }
 
   .expert__item-name {
@@ -1141,13 +1138,13 @@
 
   .expert__item-link::before {
     font-size: 18px;
-    color: #37251b;
+    color: $brownText;
   }
 
   .experts__slider-title {
     font-size: 26px;
     line-height: 30px;
-    color: #37251b;
+    color: $brownText;
     font-family: 'Open Sans Condensed', sans-serif;
   }
 
@@ -1164,7 +1161,7 @@
     &::after {
       position: absolute;
       content: "";
-      background-image: url("../img/about-page-content/experts-slide-decor.png");
+      background-image: url("../img/decor/experts-slide-decor.png");
       width: 100%;
       height: 7px;
       bottom: -7px;
@@ -1194,7 +1191,7 @@
   }
 
   .experts__slide-name {
-    color: #37251b;
+    color: $brownText;
     font-size: 26px;
     line-height: 30px;
     font-family: 'Courgette', cursive;
@@ -1250,6 +1247,7 @@
 
 .blog__page-main {
   padding-bottom: 100px;
+
   .blog__page-inner {
     display: flex;
     justify-content: space-between;
@@ -1300,7 +1298,7 @@
 
     .info__link {
       padding-left: 25px;
-      color: #37251b;
+      color: $brownText;
       font-size: 20px;
       line-height: 26px;
       position: relative;
@@ -1325,7 +1323,7 @@
     .item__content-title {
       font-size: 24px;
       line-height: 30px;
-      color: #37251b;
+      color: $brownText;
       font-family: 'Open Sans Condensed', sans-serif;
       font-weight: 300;
       margin-bottom: 15px;
@@ -1339,7 +1337,7 @@
     }
 
     .item__content-btn {
-      background-image: url(../img/main-page-content/procedures-btn-bg.png);
+      background-image: url(../img/decor/procedures-btn-bg.png);
       width: 129px;
       height: 51px;
       border-radius: 25px;
@@ -1364,6 +1362,7 @@
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
+
     &.active {
       background-color: #ac9d8e;
       pointer-events: none;
@@ -1372,7 +1371,7 @@
 
   .blog__pagination-prev,
   .blog__pagination-next {
-    background-image: url(../img/main-page-content/procedures-btn-bg.png);
+    background-image: url(../img/decor/procedures-btn-bg.png);
     width: 80px;
     height: 50px;
     border-radius: 25px;
@@ -1390,55 +1389,191 @@
     margin-left: 15px;
   }
 }
-.blog__side-bar {
 
-  .posts__title {
+
+.blog__side-bar {
+  width: 345px;
+  .side-bar__title {
     font-size: 24px;
-    color: #37251b;
+    color: $brownText;
     margin-bottom: 40px;
     text-transform: uppercase;
     margin-top: -6px;
   }
   .posts__items {
-
+    margin-bottom: 66px;
   }
   .posts__item {
-    display: flex;
-    justify-content: space-between;
     height: 70px;
-    margin-bottom: 40px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
+
   .posts__img {
     width: 70px;
     height: 100%;
     margin-right: 15px;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
-.posts__item-text {
-  max-width: 225px;
-  width: 100%;
 
-}
+  .posts__item-text {
+    max-width: 225px;
+    width: 100%;
+    display: inline-block;
+  }
+
   .posts__item-title {
     font-size: 14px;
     line-height: 20px;
-    color: #37251b;
+    color: $brownText;
     font-weight: 600;
     margin-bottom: 15px;
   }
+
   .posts__date {
     color: #ac9d8e;
     font-size: 13px;
     line-height: 15px;
   }
-  .posts__comments{
+
+  .posts__comments {
     color: #ac9d8e;
     margin-left: 20px;
     font-size: 13px;
     line-height: 15px;
+  }
+  .side-bar__categories {
+    margin-bottom: 66px;
+  }
+  .side-bar__categories-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 40px;
+    color: $brownText;
+    padding-left: 35px;
+    align-items: center;
+    position: relative;
+    a::before{
+      left: 10px;
+      position: absolute;
+    }
+    &.active a {
+      color: #d77d31;
+    }
+
+  }
+  .side-bar__categories-item:not(:last-child) {
+    border-bottom: 1px dashed #d2c4b9;
+  }
+  .side-bar__tags-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 66px;
+  }
+  .side-bar__tags-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #fff;
+    color: $brownText;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ededed;
+    line-height: 35px;
+    &.active {
+      background-image: url("../img/decor/procedures-btn-bg.png");
+      @include bgSettings;
+      color: #fff;
+    }
+  }
+  .side-bar__tweets {
+    margin-bottom: 66px;
+  }
+  .side-bar__tweets-item {
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 35px;
+    color: $brownText;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .side-bar__tweets-author,
+  .side-bar__tweets-hashtag{
+    display: inline;
+    color: #d77d31;
+  }
+  .side-bar__tweets-text {
+    display: inline;
+  }
+  .side-bar__tweets-when a {
+    color: #ac9d8e;
+  }
+  .side-bar__info {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding: 75px 20px 65px;
+    text-align: center;
+    background-image: url("../img/decor/white-bg.jpg");
+    color: #ac9d8e;
+    @include bgSettings;
+    &::before {
+      content: "";
+      background-image: url(../img/decor/procedures-item-decor.png);
+      height: 53px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-size: contain;
+    }
+    &::after  {
+      content: "";
+      background-image: url(../img/decor/experts-slide-decor.png);
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      bottom: -8px;
+      left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .side-bar__info-title {
+    color: $brownText;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .side-bar__info-duration,
+  .side-bar__info-price{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+  }
+  .side-bar__info-descr {
+    font-size: 14px;
+    line-height: 28px;
   }
 }
 
