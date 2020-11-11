@@ -22,7 +22,7 @@ $(function () {
         spaceBetween: 30,
         allowTouchMove: false,
         autoHeight: true,
-       autoplay : {
+        autoplay : {
         delay: 5000
        },
         fadeEffect: {
