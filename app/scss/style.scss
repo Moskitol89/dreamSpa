@@ -1351,46 +1351,6 @@
   }
 }
 
-.blog__main-pagination {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  .blog__page-number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-
-    &.active {
-      background-color: #ac9d8e;
-      pointer-events: none;
-    }
-  }
-
-  .blog__pagination-prev,
-  .blog__pagination-next {
-    background-image: url(../img/decor/procedures-btn-bg.png);
-    width: 80px;
-    height: 50px;
-    border-radius: 25px;
-    text-align: center;
-    line-height: 47px;
-    @include bgSettings;
-    color: #faf5f1;
-  }
-
-  .blog__pagination-prev {
-    margin-right: 25px;
-  }
-
-  .blog__pagination-next {
-    margin-left: 15px;
-  }
-}
-
-
 .blog__side-bar {
   width: 345px;
   .side-bar__title {
@@ -1734,7 +1694,14 @@
     @include bgSettings;
   }
 }
-
 //end blog-details.html
+//start gallery.html
+
+.gallery__page-heading {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: $mainLightColor;
+}
+//end gallery.html
 
 @import "media";

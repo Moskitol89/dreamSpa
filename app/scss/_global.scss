@@ -136,3 +136,41 @@ body {
   opacity: 0.4;
   cursor: auto;
 }
+  .pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .page-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+
+    &.active {
+      background-color: #ac9d8e;
+      pointer-events: none;
+    }
+  }
+
+  .pagination-prev,
+  .pagination-next {
+    background-image: url(../img/decor/procedures-btn-bg.png);
+    width: 80px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 47px;
+    @include bgSettings;
+    color: #faf5f1;
+  }
+
+  .pagination-prev {
+    margin-right: 25px;
+  }
+
+  .pagination-next {
+    margin-left: 15px;
+  }
+}
