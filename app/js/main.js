@@ -51,6 +51,8 @@ $(function () {
         }
     });
 
+    let mixItUp = mixitup(".gallery-block__items");
+
     $(".header__burger").click(function () {
         $(".menu").slideToggle();
     })
@@ -80,6 +82,10 @@ $(function () {
     });
     $(".blog__side-bar .side-bar__tags-btn").click(function () {
         $(".blog__side-bar .side-bar__tags-btn").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".gallery__block-buttons .gallery__block-button").click(function () {
+        $(".gallery__block-buttons .gallery__block-button").removeClass("active");
         $(this).addClass("active");
     });
     //для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
