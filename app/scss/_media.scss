@@ -52,7 +52,7 @@
     position: absolute;
     display: none;
     left: 0;
-    top: 186px;
+    top: 185px;
     text-align: center;
     background-color: #e6e5d9;
     width: 100%;
@@ -104,16 +104,16 @@
     flex-direction: column;
     align-items: center;
 
-    .procedures__item-wrapper {
-      & + .procedures__item-wrapper {
-        margin-top: 100px;
-      }
+  }
+  .procedures__item-wrapper {
+    & + .procedures__item-wrapper {
+      margin-top: 100px;
     }
   }
   .procedures .procedures__text {
     margin-bottom: 115px;
   }
-  .procedures .procedures__items .procedures__item {
+  .procedures__item {
     padding-bottom: 20px;
     max-height: 100%;
     .procedures__img-wrapper {
@@ -186,9 +186,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 355px);
   }
-  .gallery-block__item-8 {
-    grid-column: 1/3;
-    grid-row: 4/5;
+  .procedures-content__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .procedures__page-content .procedures__item-wrapper {
+    margin-bottom: 50px;
   }
 }
 
@@ -364,6 +367,21 @@
   .blog__main-title {
     text-align: center;
   }
+  .procedures__page-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .procedures-heading__title {
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    position: initial;
+  }
+  .procedures-heading__title span {
+    font-size: 16px;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -373,9 +391,25 @@
     grid-template-rows: repeat(9, 1fr);
     grid-auto-flow: column;
   }
+  .procedures-natural__items {
+    flex-direction: column;
+  }
+  .procedures-natural__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .procedures-links__inner-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .procedures-links__link:not(:last-child) {
+    margin: 0;
+  }
+  .procedures__page-content .process__tab-item {
+    text-align: center;
+  }
 }
 @media (max-width: 465px) {
-  .about__page-process .process__tabs {
+  .process__tabs {
     margin-bottom: 30px;
     ol {
       display: flex;
@@ -437,7 +471,7 @@
     }
   }
   .warm .warm__item-wrapper:after,
-  .procedures .procedures__items .procedures__item-wrapper:after{
+  .procedures__item-wrapper:after{
     bottom: -12px;
   }
   .about__page-experts .experts__slider-slide::before {

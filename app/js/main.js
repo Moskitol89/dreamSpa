@@ -50,9 +50,9 @@ $(function () {
             }
         }
     });
-
-    let mixItUp = mixitup(".gallery-block__items");
-
+    if(document.querySelector(".gallery-block__items")) {
+        let mixItUp = mixitup(".gallery-block__items");
+    }
     $(".header__burger").click(function () {
         $(".menu").slideToggle();
     })
