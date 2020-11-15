@@ -36,7 +36,7 @@ $(function () {
         },
     });
 
-    let expertsSwiper = new Swiper(".about__page-experts .swiper-container", {
+    let expertsSwiper = new Swiper(".experts__slider", {
         spaceBetween: 25,
         slidesPerView: 1,
         navigation: {

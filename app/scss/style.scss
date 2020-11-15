@@ -1143,98 +1143,98 @@
     color: $brownText;
   }
 
-  .experts__slider-title {
-    font-size: 26px;
-    line-height: 30px;
-    color: $brownText;
-    font-family: 'Open Sans Condensed', sans-serif;
-  }
 
-  .experts__slider-slides {
-    margin-bottom: 7px;
-  }
+}
+.experts__slider-title {
+  font-size: 26px;
+  line-height: 30px;
+  color: $brownText;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 
-  .experts__slide-wrapper {
-    height: 220px;
-    max-width: 520px;
+.experts__slider-slides {
+  margin-bottom: 7px;
+}
+
+.experts__slide-wrapper {
+  height: 220px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/decor/experts-slide-decor.png");
     width: 100%;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/decor/experts-slide-decor.png");
-      width: 100%;
-      height: 7px;
-      bottom: -7px;
-      left: 0;
-      background-size: contain;
-    }
+    height: 7px;
+    bottom: -7px;
+    left: 0;
+    background-size: contain;
   }
+}
 
-  .experts__slider-slide {
-    width: 100%;
+.experts__slider-slide {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 96%;
     height: 100%;
-    background-color: #fff;
-    padding: 50px 30px;
-    box-sizing: border-box;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 96%;
-      height: 100%;
-      top: 0;
-      left: 2%;
-      border-left: 1px dashed #d2c4b9;
-      border-right: 1px dashed #d2c4b9;
-    }
+    top: 0;
+    left: 2%;
+    border-left: 1px dashed #d2c4b9;
+    border-right: 1px dashed #d2c4b9;
   }
+}
 
-  .experts__slide-name {
-    color: $brownText;
-    font-size: 26px;
-    line-height: 30px;
-    font-family: 'Courgette', cursive;
-    margin-bottom: 10px;
-  }
+.experts__slide-name {
+  color: $brownText;
+  font-size: 26px;
+  line-height: 30px;
+  font-family: 'Courgette', cursive;
+  margin-bottom: 10px;
+}
 
-  .experts__slide-discount {
-    color: #9cc64d;
-    font-size: 40px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    margin-bottom: 5px;
-  }
+.experts__slide-discount {
+  color: #9cc64d;
+  font-size: 40px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-bottom: 5px;
+}
 
-  .experts__slide-note {
-    color: #ac9d8e;
-    font-size: 12px;
-    line-height: 20px;
-    font-style: italic;
-    max-width: 280px;
-  }
+.experts__slide-note {
+  color: #ac9d8e;
+  font-size: 12px;
+  line-height: 20px;
+  font-style: italic;
+  max-width: 280px;
+}
+.slider__arrows-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+}
 
-  .slider__arrows-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    align-items: center;
-  }
+.experts__slider-arrows {
+  width: 65px;
+  display: flex;
+  margin-left: 10px;
+  justify-content: space-between;
+}
 
-  .experts__slider-arrows {
-    width: 65px;
-    display: flex;
-    margin-left: 10px;
-    justify-content: space-between;
-  }
-
-  .swiper-next,
-  .swiper-prev {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-  }
+.swiper-next,
+.swiper-prev {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
 }
 
 //end about.html experts block
@@ -1906,6 +1906,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &:not(:last-child){
+    margin-right: 10px;
+  }
 }
 
 .procedures-natural__item-circle {
@@ -2034,6 +2037,16 @@
 }
 .procedures__page-content--reverse {
   flex-direction: row-reverse;
+}
+.procedures__page-offer {
+  padding-bottom: 105px;
+}
+ .procedures__page-offer .experts__slider-title {
+  font-size: 26px;
+  line-height: 28px;
+  color: #37251b;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
 }
 //end procedures.html
 
