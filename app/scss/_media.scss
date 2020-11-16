@@ -213,6 +213,14 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  .location-page__info-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .location-page__contacts-table {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 720px) {
   footer.content__block {
@@ -226,26 +234,27 @@
       margin: 20px 10px 10px;
     }
   }
+
 }
 @media (max-width: 840px) {
-  .about__page-gift .gift__form .gift__form-inputs {
+ .gift__form .gift__form-inputs {
     flex-wrap: wrap;
     margin-bottom: 10px;
   }
-  .about__page-gift .gift__form .inputs__wrapper {
+  .gift__form .inputs__wrapper {
     max-width: 100%;
   }
-  .about__page-gift .gift__form textarea {
+ .gift__form textarea {
     max-width: 100%;
     margin-left: 0;
     margin-top: 20px;
     height: 200px;
   }
-  .about__page-gift .gift__form .form__note-wrapper {
+  .gift__form .form__note-wrapper {
     flex-direction: column;
     justify-content: center;
   }
-  .about__page-gift .gift__form .gift__form-note {
+ .gift__form .gift__form-note {
     margin-bottom: 30px;
   }
   .experts__slide-wrapper {
@@ -381,6 +390,13 @@
   .procedures-heading__title span {
     font-size: 16px;
     line-height: 40px;
+  }
+  .location-page__contacts-table {
+    flex-direction: column;
+    align-items: center;
+  }
+  .location-page__contacts-text:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 

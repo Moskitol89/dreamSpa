@@ -25,6 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-heart:before {
   content: "\f004";
 }
@@ -33,6 +34,9 @@
 }
 .icon-search-plus:before {
   content: "\f00e";
+}
+.icon-info-circle:before {
+  content: "\f05a";
 }
 .icon-leaf:before {
   content: "\f06c";
@@ -45,6 +49,9 @@
 }
 .icon-external-link:before {
   content: "\f08e";
+}
+.icon-phone:before {
+  content: "\f095";
 }
 .icon-twitter:before {
   content: "\f099";
@@ -64,11 +71,17 @@
 .icon-caret-right:before {
   content: "\f0da";
 }
+.icon-envelope:before {
+  content: "\f0e0";
+}
 .icon-coffee:before {
   content: "\f0f4";
 }
 .icon-beer:before {
   content: "\f0fc";
+}
+.icon-location-arrow:before {
+  content: "\f124";
 }
 .icon-youtube:before {
   content: "\f167";
