@@ -22,11 +22,11 @@ $(function () {
         spaceBetween: 30,
         allowTouchMove: false,
         autoHeight: true,
-        autoplay : {
-        delay: 5000
-       },
+        autoplay: {
+            delay: 5000
+        },
         fadeEffect: {
-          crossFade: true
+            crossFade: true
         },
         effect: 'fade',
         navigation: {
@@ -50,19 +50,41 @@ $(function () {
             }
         }
     });
-    if(document.querySelector(".gallery-block__items")) {
+    if (document.querySelector(".gallery-block__items")) {
         let mixItUp = mixitup(".gallery-block__items");
     }
     $(".header__burger").click(function () {
         $(".menu").slideToggle();
     })
-    if(window.innerWidth < 1200) {
+    if (window.innerWidth < 1200) {
         $(".header .menu ul li a").click(function () {
             $(".menu").fadeToggle();
         });
     }
 
-    $(".process__tab").click(function (){
+    //свой генератор звездочек
+    //берет число из дата атрибута data-stars-filled дивов с классом rate
+    //это число - кол-во заполненных звезд, функция дополняет пустыми звездами до 5
+    //внутри дива с классом rate должен быть пустой ul к которому цепляются li с фоновыми картинками звезд
+    let rateDivArr = document.querySelectorAll(".rate");
+    rateDivArr.forEach(function (rateDiv) {
+        let filledStarsNumber = rateDiv.dataset.starsFilled;
+        let liStarParentUl = rateDiv.firstElementChild;
+        for (let i = 0; i < filledStarsNumber; i++) {
+            let liStar = document.createElement("li");
+            liStar.classList.add("filled-star");
+            liStar.style.backgroundImage = "url(img/star-full.svg)";
+            liStarParentUl.appendChild(liStar);
+        }
+        for (; filledStarsNumber < 5; filledStarsNumber++) {
+            let liStar = document.createElement("li");
+            liStar.classList.add("empty-star");
+            liStar.style.backgroundImage = "url(img/star-empty.svg)";
+            liStarParentUl.appendChild(liStar);
+        }
+    });
+
+    $(".process__tab").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
         let index = $(".process__tab").index(this);
         $(".process__tab-item").eq(index).addClass("active")
@@ -71,9 +93,9 @@ $(function () {
 
     $(".about__page-gift .gift__item").click(function () {
         $(".about__page-gift .gift__item").removeClass("active");
-       $(this).addClass("active");
-       $(".about__page-gift .gift__item .gift__hover-block").html("Выбрать карту");
-       $(".about__page-gift .gift__item.active .gift__hover-block").html("Карта выбрана");
+        $(this).addClass("active");
+        $(".about__page-gift .gift__item .gift__hover-block").html("Выбрать карту");
+        $(".about__page-gift .gift__item.active .gift__hover-block").html("Карта выбрана");
     });
 
     $(".blog__side-bar .side-bar__categories-item").click(function () {
@@ -88,7 +110,7 @@ $(function () {
         $(".gallery__block-buttons .gallery__block-button").removeClass("active");
         $(this).addClass("active");
     });
-    //для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
+//для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
     $(".side-bar__categories-item a , .side-bar__tags-btn").click((e) => {
         e.preventDefault();
     })
