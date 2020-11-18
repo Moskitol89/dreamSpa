@@ -1,4 +1,7 @@
 $(function () {
+    //сюда вписывается информация с ползунка с страницы shop.html
+    let sideBarPrice = $(".side-bar__range-price")
+
     $('.image-popup-no-margins').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
@@ -63,13 +66,14 @@ $(function () {
     }
 
     //свой генератор звездочек
-    //берет число из дата атрибута data-stars-filled дивов с классом rate
-    //это число - кол-во заполненных звезд, функция дополняет пустыми звездами до 5
-    //внутри дива с классом rate должен быть пустой ul к которому цепляются li с фоновыми картинками звезд
+    //берет цифру из дата атрибута data-stars-filled дивов с классом rate
+    //эта цифра - кол-во заполненных звезд, функция дополняет пустыми звездами до 5
+    //внутри дива с классом rate создается ul к которому цепляются li с фоновыми картинками звезд
     let rateDivArr = document.querySelectorAll(".rate");
     rateDivArr.forEach(function (rateDiv) {
         let filledStarsNumber = rateDiv.dataset.starsFilled;
-        let liStarParentUl = rateDiv.firstElementChild;
+        let liStarParentUl = document.createElement("ul");
+        rateDiv.appendChild(liStarParentUl);
         for (let i = 0; i < filledStarsNumber; i++) {
             let liStar = document.createElement("li");
             liStar.classList.add("filled-star");
@@ -82,6 +86,23 @@ $(function () {
             liStar.style.backgroundImage = "url(img/star-empty.svg)";
             liStarParentUl.appendChild(liStar);
         }
+    });
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 60,
+        from: 15,
+        to: 40,
+        drag_interval: true,
+        min_interval: null,
+        max_interval: null,
+        hide_min_max: true,
+        hide_from_to: true,
+        onChange: function (data) {
+            console.log(sideBarPrice)
+            sideBarPrice.text(`Price: $${data.from}.00 - $${data.to}.00`);
+        },
     });
 
     $(".process__tab").click(function () {
