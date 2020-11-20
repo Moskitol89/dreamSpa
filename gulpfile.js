@@ -31,6 +31,8 @@ gulp.task("css", function () {
         "node_modules/magnific-popup/dist/magnific-popup.css",
         "node_modules/rateyo/min/jquery.rateyo.min.css",
         "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
+        "node_modules/jquery-form-styler/dist/jquery.formstyler.css",
+        "node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css"
     ])
         .pipe(concat("_libs.scss"))
         .pipe(gulp.dest("app/scss"))
@@ -44,6 +46,7 @@ gulp.task("js", function () {
         "node_modules/mixitup/dist/mixitup.js",
         "node_modules/rateyo/min/jquery.rateyo.min.js",
         "node_modules/ion-rangeslider/js/ion.rangeSlider.min.js",
+        "node_modules/jquery-form-styler/dist/jquery.formstyler.js"
     ])
         .pipe(concat("libs.min.js"))
         .pipe(uglify())

@@ -105,6 +105,10 @@ $(function () {
         },
     });
 
+    setTimeout(function() {
+        $(".shop-main__sorting-sort").styler();
+    }, 100)
+
     $(".process__tab").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
         let index = $(".process__tab").index(this);

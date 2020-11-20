@@ -56,7 +56,7 @@
     text-align: center;
     background-color: #e6e5d9;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
 
     ul {
       display: block;
@@ -79,6 +79,9 @@
   }
   .heading__text {
     right: 5%;
+  }
+  .experts__slider-slide {
+    text-align: left;
   }
 }
 
@@ -293,6 +296,12 @@
   .shop-page__items {
     justify-content: center;
   }
+  .shop-main__sorting {
+    flex-direction: column-reverse;
+  }
+  .shop-main__sorting-sort {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 640px) {
   .why__content-title {
@@ -454,6 +463,9 @@
         }
       }
     }
+  }
+  .shop-main__sorting-text {
+    font-size: 18px;
   }
 }
 
