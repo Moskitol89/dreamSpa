@@ -74,7 +74,8 @@ gulp.task("script", function () {
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-            baseDir: "app/"
+            baseDir: "app/",
+            index: "shop-detail.html"
         }
     });
 });

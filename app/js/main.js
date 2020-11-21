@@ -53,12 +53,33 @@ $(function () {
             }
         }
     });
+
+    let shopDetailsSwiper = new Swiper(".shop-detail__products-slider", {
+        spaceBetween: 25,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.shop-detail__products-arrows .swiper-next',
+            prevEl: '.shop-detail__products-arrows .swiper-prev',
+            disabledClass: 'swiper-button-disabled'
+        },
+        breakpoints: {
+            1220: {
+                slidesPerView: 3
+            },
+            830: {
+                slidesPerView: 2
+            }
+        }
+    });
+
     if (document.querySelector(".gallery-block__items")) {
         let mixItUp = mixitup(".gallery-block__items");
     }
+
     $(".header__burger").click(function () {
         $(".menu").slideToggle();
     })
+
     if (window.innerWidth < 1200) {
         $(".header .menu ul li a").click(function () {
             $(".menu").fadeToggle();
@@ -135,8 +156,29 @@ $(function () {
         $(".gallery__block-buttons .gallery__block-button").removeClass("active");
         $(this).addClass("active");
     });
+
+    //смена пути картинок по клику на их превью на странице shop-details.html
+    document.querySelectorAll(".shop-detail__preview-img").forEach( img =>
+        img.addEventListener("click", function () {
+            document.querySelector(".shop-detail__main-img")
+                .src = this.src;
+        })
+);
 //для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
     $(".side-bar__categories-item a , .side-bar__tags-btn").click((e) => {
         e.preventDefault();
     })
+    //псево карт, просто для симуляции
+    let cart = document.querySelector(".shop-detail__pseudo-cart");
+    let productCountBlock = document.querySelector(".shop-detail__pseudo-count");
+    let productCount = 0;
+    let addBtn = document.querySelector(".shop-detail__add-btn");
+    addBtn.addEventListener("click", function () {
+        let selectedNumber = +document.querySelector(".jq-selectbox__select-text").textContent;
+        productCount += selectedNumber;
+        productCountBlock.textContent = productCount;
+        if(!cart.classList.contains("active")) {
+            cart.classList.add("active");
+        }
+    });
 });
