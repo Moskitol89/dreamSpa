@@ -173,12 +173,14 @@ $(function () {
     let productCountBlock = document.querySelector(".shop-detail__pseudo-count");
     let productCount = 0;
     let addBtn = document.querySelector(".shop-detail__add-btn");
-    addBtn.addEventListener("click", function () {
-        let selectedNumber = +document.querySelector(".jq-selectbox__select-text").textContent;
-        productCount += selectedNumber;
-        productCountBlock.textContent = productCount;
-        if(!cart.classList.contains("active")) {
-            cart.classList.add("active");
-        }
-    });
+    if(addBtn) {
+        addBtn.addEventListener("click", function () {
+            let selectedNumber = +document.querySelector(".jq-selectbox__select-text").textContent;
+            productCount += selectedNumber;
+            productCountBlock.textContent = productCount;
+            if (!cart.classList.contains("active")) {
+                cart.classList.add("active");
+            }
+        });
+    }
 });

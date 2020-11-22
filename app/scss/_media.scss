@@ -13,6 +13,7 @@
     grid-row: 3 / 5;
   }
 }
+
 @media (max-width: 1540px) {
   .gallery .gallery__items {
     grid-template-columns: repeat(4, 300px);
@@ -25,11 +26,13 @@
   .reviews .slide__text-block {
     padding-left: 100px;
     padding-right: 100px;
+
     .slide__text-author {
       right: 15px;
     }
   }
 }
+
 @media (max-width: 1220px) {
   .gallery .gallery__items {
     grid-template-columns: repeat(3, 300px);
@@ -38,16 +41,18 @@
   .gallery__item-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-     }
+  }
   .gallery__item-9 {
-   display: none;
+    display: none;
   }
 }
+
 @media (max-width: 1340px) {
   .shop-page__item {
-   margin: 0 auto 28px;
+    margin: 0 auto 28px;
   }
 }
+
 @media (max-width: 1200px) {
   .header__menu .header__menu-wrapper {
     padding: 0;
@@ -94,14 +99,15 @@
 }
 
 @media (max-width: 1150px) {
-.shop-detail__reviews-items {
-  flex-direction: column;
-  align-items: center;
-}
+  .shop-detail__reviews-items {
+    flex-direction: column;
+    align-items: center;
+  }
   .shop-detail__reviews-item {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 1090px) {
   .warm .warm__items {
     flex-direction: column;
@@ -136,14 +142,17 @@
   .procedures__item {
     padding-bottom: 20px;
     max-height: 100%;
+
     .procedures__img-wrapper {
       top: -65px;
       width: 175px;
       height: 175px;
     }
+
     .procedures__item-text {
       height: auto;
     }
+
     .procedures__item-link {
       bottom: 0;
       margin-top: 40px;
@@ -199,7 +208,7 @@
     width: 100%;
     margin-bottom: 120px;
   }
-  .blog-details .blog__page-inner{
+  .blog-details .blog__page-inner {
     flex-direction: column;
   }
   .gallery-block__items {
@@ -229,7 +238,7 @@
 
 @media (max-width: 930px) {
   .gallery {
-   padding-left: 15px;
+    padding-left: 15px;
     padding-right: 15px;
   }
   .gallery .gallery__items {
@@ -254,6 +263,7 @@
     margin-bottom: 40px;
   }
 }
+
 @media (max-width: 720px) {
   footer.content__block {
     padding-top: 70px;
@@ -261,6 +271,7 @@
   .footer .footer__items {
     flex-wrap: wrap;
     justify-content: center;
+
     .footer__item {
       text-align: center;
       margin: 20px 10px 10px;
@@ -268,15 +279,16 @@
   }
 
 }
+
 @media (max-width: 840px) {
- .gift__form .gift__form-inputs {
+  .gift__form .gift__form-inputs {
     flex-wrap: wrap;
     margin-bottom: 10px;
   }
   .gift__form .inputs__wrapper {
     max-width: 100%;
   }
- .gift__form textarea {
+  .gift__form textarea {
     max-width: 100%;
     margin-left: 0;
     margin-top: 20px;
@@ -286,7 +298,7 @@
     flex-direction: column;
     justify-content: center;
   }
- .gift__form .gift__form-note {
+  .gift__form .gift__form-note {
     margin-bottom: 30px;
   }
   .experts__slide-wrapper {
@@ -296,9 +308,10 @@
     right: 15px;
   }
 }
+
 @media (max-width: 725px) {
   .about__page-process .process__select-items .process__select-item {
-    &+.process__select-item {
+    & + .process__select-item {
       margin-top: 20px;
     }
   }
@@ -323,20 +336,23 @@
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 640px) {
   .why__content-title {
     text-align: center;
   }
-  .about__page-process{
+  .about__page-process {
     text-align: center;
   }
   .gallery .gallery__items {
     grid-template-columns: repeat(2, 135px);
     grid-template-rows: repeat(5, 125px);
+
     .gallery__item .gallery__item-links ul li {
       &:hover {
         background-color: transparent;
       }
+
       a:before {
         font-size: 12px;
       }
@@ -382,7 +398,7 @@
   .about__page-why .why__img-text--brown {
     font-size: 13px;
   }
-  .blog-user{
+  .blog-user {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -467,7 +483,10 @@
     justify-content: center;
   }
   .shop-detail__quantity {
-   flex-direction: column;
+    flex-direction: column;
+  }
+  .gallery__item .gallery__item-links .item__title, .gallery-block__image-wrapper .gallery__item-links .item__title {
+    display: none;
   }
 }
 
@@ -495,9 +514,11 @@
     text-align: center;
   }
 }
+
 @media (max-width: 465px) {
   .process__tabs {
     margin-bottom: 30px;
+
     ol {
       display: flex;
       flex-direction: column;
@@ -525,6 +546,7 @@
   }
   .footer .footer__items {
     display: block;
+
     .footer__item {
       margin: 20px auto;
     }
@@ -561,7 +583,7 @@
     }
   }
   .warm .warm__item-wrapper:after,
-  .procedures__item-wrapper:after{
+  .procedures__item-wrapper:after {
     bottom: -12px;
   }
   .about__page-experts .experts__slider-slide::before {
