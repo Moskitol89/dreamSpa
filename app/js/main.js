@@ -16,6 +16,7 @@ $(function () {
             enabled: false,
         }
     });
+
     $(".gallery__item-links ul li:last-child a").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("clicked");
@@ -126,7 +127,7 @@ $(function () {
         },
     });
 
-    setTimeout(function() {
+    setTimeout(function () {
         $(".shop-main__sorting-sort").styler();
     }, 100)
 
@@ -158,12 +159,12 @@ $(function () {
     });
 
     //смена пути картинок по клику на их превью на странице shop-details.html
-    document.querySelectorAll(".shop-detail__preview-img").forEach( img =>
+    document.querySelectorAll(".shop-detail__preview-img").forEach(img =>
         img.addEventListener("click", function () {
             document.querySelector(".shop-detail__main-img")
                 .src = this.src;
         })
-);
+    );
 //для демонстрации клика по ссылкам категорий и тегов на странице blog.html, отключен переход по ссылке
     $(".side-bar__categories-item a , .side-bar__tags-btn").click((e) => {
         e.preventDefault();
@@ -173,7 +174,7 @@ $(function () {
     let productCountBlock = document.querySelector(".shop-detail__pseudo-count");
     let productCount = 0;
     let addBtn = document.querySelector(".shop-detail__add-btn");
-    if(addBtn) {
+    if (addBtn) {
         addBtn.addEventListener("click", function () {
             let selectedNumber = +document.querySelector(".jq-selectbox__select-text").textContent;
             productCount += selectedNumber;

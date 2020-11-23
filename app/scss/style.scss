@@ -1028,6 +1028,7 @@
     font-size: 12px;
     line-height: 28px;
     color: #ac9d8e;
+    padding-right: 20px;
   }
 
   .gift__form-button {
@@ -1121,6 +1122,7 @@
     .expert__item-img {
       border-radius: 50%;
       position: relative;
+      width: 100%;
     }
   }
 
@@ -1853,6 +1855,9 @@
 
 //end gallery.html
 //start procedures.html
+.procedures__title-block {
+  padding-top: 45px;
+}
 .procedures__page-heading {
   height: 350px;
   @include bgSettings;
