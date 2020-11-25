@@ -64,6 +64,7 @@ body {
   background-color: $mainDarkColor;
   position: relative;
   padding-top: 95px;
+  padding-bottom: 50px;
   &:before {
     content: "";
     position: absolute;
@@ -79,7 +80,7 @@ body {
 .title__block {
   text-align: center;
   max-width: 775px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   .title__block-title {
     font-size: 26px;
     line-height: 30px;
